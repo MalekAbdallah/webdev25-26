@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>WD Lesson 4.1 Practical</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <script>
+      function translateHouse(){
+        let lang = document.getElementById("language").value;
+        let output = document.getElementById("output");
+        let house = "";
+
+        if (lang === "Spanish") {
+          house = "casa";
+        } else if (lang === "French") {
+          house = "maison";
+        } else if (lang === "German") {
+          house = "haus";
+        } else {
+          output.innerHTML = "<h3>Please select a language.</h3>";
+          return;
+        }
+
+        output.innerHTML = `<h3>"House" in ${lang} is "${house}"</h3>`;
+      }
+    </script>
+  </head>
+
+  <body>
+    <nav class="container">
+      <a href="index.html"> Home </a>
+      <a href="discount.html"> Discount </a>
+      <a href="collision.html"> Collision </a>
+      <a href="translation.html"> Translation </a>
+      <a href="guessing.html"> Guess Game </a>
+    </nav>
+
+    <div id="banner" class="container center">
+      <h1>Translation</h1>
+    </div>
+
+    <div class="container subbanner">
+      <div>
+        <div class="highlight">Scenario:</div>
+        Translate "house" into the specified language.
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="card">
+        <h3>Translate house into another language</h3>
+
+        <select id="language">
+          <option value="">Select language</option>
+          <option>Spanish</option>
+          <option>French</option>
+          <option>German</option>
+        </select>
+
+        <input type="button" onclick="translateHouse()" value="Translate">
+        <div id="output"></div>
+      </div>
+    </div>
+
+    <div id="footer" class="container center">
+      <h3>WD Lesson 4.1 Practical</h3>
+    </div>
+  </body>
+</html>
