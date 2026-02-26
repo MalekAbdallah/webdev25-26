@@ -7,8 +7,8 @@
 let correct;
 function generateProblem(){
     let problem = document.getElementById("problem");
-    let num1 = Math.floor(Math.random() * 21);
-    let num2 = Math.floor(Math.random() * 21);
+    let num1 = Math.floor(Math.random() * 20-0+1)+0;
+    let num2 = Math.floor(Math.random() * 20-0+1)+0;
     correct = num1 + num2;
     problem.textContent = `${num1} + ${num2} =`;
 }
